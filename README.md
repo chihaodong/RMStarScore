@@ -1,10 +1,10 @@
 # RMStarScore 
 
-实现评分等级及平均分（用星星标示）
+实现评分等级及平均分（用星星表示）
 
 # 使用方法
 
-导入"RMStarScore"文件夹到项目工程
+导入"CHD"文件夹到项目工程
 引入头文件： #import "RMStarScore.h" 
 
 RMStarScore *star = [[RMStarScore alloc] initWithFrame:self.view.bounds data:@[@332,@93,@129,@63,@0]];
