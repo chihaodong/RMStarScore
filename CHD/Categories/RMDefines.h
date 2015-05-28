@@ -76,10 +76,11 @@
 #pragma mark - **** RM Custom ****
 #pragma mark -
 
+//开发模式打印，发布模式不打印
 #ifdef DEBUG
-    #define RMLog(format, ...) NSLog(__VA_ARGS__)
-#else // 处于发布阶段
-    #define RMLog(...)
+    #define RMLog(fmt, ...) NSLog((@"\n[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt"\n"), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+    #define RMLog(...) {}
 #endif
 
 //全局并发队列
